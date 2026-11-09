@@ -1,0 +1,196 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover"
+    />
+    <title>For You</title>
+    <meta
+      name="description"
+      content="Ek private khat — love notes, wada, aur dil ke alfaz."
+    />
+    <meta name="theme-color" content="#140e10" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Outfit:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <article class="sheet">
+        <span class="edge" aria-hidden="true"></span>
+
+        <!-- Cover -->
+        <div id="cover">
+          <div class="cover-actions">
+            <button type="button" class="ghost-btn" data-open-desk>Apna banao</button>
+          </div>
+          <div id="cover-body" class="cover-body">
+            <div class="cover-title-block">
+              <p class="kicker">Ek khat, sirf tere liye</p>
+              <h1 id="cover-title" class="cover-title">For you</h1>
+              <p id="cover-dedication" class="cover-dedication">Read it when you miss me.</p>
+            </div>
+            <button
+              type="button"
+              id="seal-btn"
+              class="seal-btn"
+              aria-label="Open the letter for you"
+            >
+              <span id="seal-disc" class="seal-disc">
+                <span class="ring" aria-hidden="true"></span>
+                <span class="ring inner" aria-hidden="true"></span>
+                <span id="seal-mark" class="mark">Y</span>
+              </span>
+              <span class="seal-caption">Seal todna</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Letter -->
+        <div id="letter" class="letter rise hidden">
+          <header class="letter-header">
+            <h1 id="letter-title" tabindex="-1">For you</h1>
+          </header>
+
+          <div id="edit-banner" class="edit-banner hidden">
+            <p>Tum edit kar rahe ho. Yehhi use dikhega.</p>
+            <button type="button" class="ink-btn" id="done-writing">Ho gaya</button>
+          </div>
+
+          <section class="section" aria-labelledby="letter-heading">
+            <p class="kicker">Khat</p>
+            <h2 id="letter-heading">
+              <span id="salutation">Meri jaan,</span>
+            </h2>
+            <div id="paragraphs" class="paragraphs"></div>
+          </section>
+
+          <div class="divider"><div class="rule" aria-hidden="true"><span></span><span class="diamond"></span><span></span></div></div>
+
+          <section class="section" aria-labelledby="notes-heading">
+            <div class="section-head">
+              <p class="kicker">Chhote notes</p>
+              <h2 id="notes-heading">Woh chhoti baatein</h2>
+            </div>
+            <ul id="notes" class="notes"></ul>
+            <button type="button" id="add-note" class="ghost-btn hidden">Naya note</button>
+          </section>
+
+          <div class="divider"><div class="rule" aria-hidden="true"><span></span><span class="diamond"></span><span></span></div></div>
+
+          <section class="section" aria-labelledby="quotes-heading" aria-live="polite">
+            <div class="section-head">
+              <p class="kicker">Udhari lines</p>
+              <h2 id="quotes-heading">Pehle kisi ne keh diya tha</h2>
+            </div>
+            <figure class="quote-block">
+              <blockquote><p id="quote-text"></p></blockquote>
+              <figcaption>
+                <span id="quote-by"></span>
+                <span aria-hidden="true"> · </span>
+                <cite id="quote-work"></cite>
+              </figcaption>
+            </figure>
+            <div class="quote-nav">
+              <button type="button" id="quote-prev">Pehle</button>
+              <span id="quote-count" class="count"></span>
+              <button type="button" id="quote-next">Aage</button>
+            </div>
+          </section>
+
+          <div class="divider"><div class="rule" aria-hidden="true"><span></span><span class="diamond"></span><span></span></div></div>
+
+          <section class="section" aria-labelledby="reasons-heading">
+            <div class="section-head">
+              <p class="kicker">Jo yaad rehta hai</p>
+              <h2 id="reasons-heading">Poori list nahi, bas kuch baatein</h2>
+            </div>
+            <ol id="reasons" class="reasons"></ol>
+          </section>
+
+          <div class="divider"><div class="rule" aria-hidden="true"><span></span><span class="diamond"></span><span></span></div></div>
+
+          <section class="section promise" aria-labelledby="promise-heading">
+            <p class="kicker">Ek wada</p>
+            <h2 id="promise-heading">Agar tum abhi bhi yahan ho</h2>
+            <div id="hold-area"></div>
+          </section>
+
+          <footer class="letter-footer">
+            <p id="sign-off" class="sign-off">Hamesha.</p>
+            <p id="sign-name" class="sign-name hidden"></p>
+            <p class="closing">Yeh khat rakh lena. Jab bhi dil bhari ho, padh lena — main wahi hoon, tumhare paas.</p>
+            <div class="footer-actions">
+              <button type="button" class="ink-btn" data-seal>Khat band karo</button>
+              <button type="button" class="ghost-btn" data-open-desk>Apna banao</button>
+            </div>
+          </footer>
+        </div>
+      </article>
+    </div>
+
+    <!-- Writer's desk -->
+    <div id="desk" class="desk-backdrop hidden" role="presentation">
+      <div
+        class="desk"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="desk-title"
+      >
+        <span class="edge" aria-hidden="true"></span>
+        <div class="desk-inner">
+          <div>
+            <p class="kicker">Writer ki table</p>
+            <h2 id="desk-title" style="margin: 0.5rem 0 0; font-family: var(--font-display); font-size: 2.25rem; font-style: italic; font-weight: 500;">
+              Apna banao
+            </h2>
+            <p class="desk-intro">
+              Uska naam, tumhara naam, aur alfaz. Yeh is phone pe hi rehte hain — use screen dikhana, koi cloud link nahi.
+            </p>
+          </div>
+          <div class="desk-fields">
+            <label>
+              Uska naam
+              <input id="her-name" class="field" maxlength="32" placeholder="jo naam roz lete ho" />
+            </label>
+            <label>
+              Tumhara naam
+              <input id="his-name" class="field" maxlength="32" placeholder="signature kaise likhoge" />
+            </label>
+            <label>
+              Cover ki line
+              <input id="dedication" class="field" maxlength="80" />
+            </label>
+          </div>
+          <div class="desk-tools">
+            <button type="button" id="toggle-write" class="outline-btn" aria-pressed="false">
+              Alfaz badlo
+            </button>
+            <button type="button" id="restore" class="ghost-btn" style="align-self: flex-start">
+              Original wapas lao
+            </button>
+          </div>
+          <div class="desk-actions">
+            <button type="button" class="ink-btn" data-present>Uske liye seal karo</button>
+            <button type="button" class="ghost-btn" data-close-desk>Band karo</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
+
+</body></html>
